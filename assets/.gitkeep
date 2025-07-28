@@ -1,0 +1,8 @@
+# Add your images here:
+# - avatar.jpg (80x80px, your profile photo)
+# - redforge-demo.webp (320x180px, project demo)
+# - securepr-demo.webp (320x180px, project demo) 
+# - proxene-demo.webp (320x180px, project demo)
+
+# Convert GIFs to WebP for smaller file sizes:
+# ffmpeg -i demo.gif -vf "scale=320:180" -c:v libwebp -quality 80 demo.webp
