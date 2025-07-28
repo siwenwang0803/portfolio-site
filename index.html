@@ -4,7 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siwen Wang · LLM Security Engineer</title>
-    <meta name="description" content="Full-stack LLM security: Red team testing, DevSecOps integration, and production governance. OWASP LLM Top-10 specialist with enterprise-ready solutions.">
+    <meta name="description" content="Portfolio of Siwen Wang – Red‑team testing, CI/CD AI code review, and developer‑first LLM governance proxy.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://siwenwang0803.github.io/portfolio-site/">
+    <meta property="og:title" content="Siwen Wang · LLM Security Engineer">
+    <meta property="og:description" content="Portfolio of Siwen Wang – Red‑team testing, CI/CD AI code review, and developer‑first LLM governance proxy.">
+    <meta property="og:image" content="https://siwenwang0803.github.io/portfolio-site/assets/portfolio-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://siwenwang0803.github.io/portfolio-site/">
+    <meta property="twitter:title" content="Siwen Wang · LLM Security Engineer">
+    <meta property="twitter:description" content="Portfolio of Siwen Wang – Red‑team testing, CI/CD AI code review, and developer‑first LLM governance proxy.">
+    <meta property="twitter:image" content="https://siwenwang0803.github.io/portfolio-site/assets/portfolio-preview.jpg">
+    
+    <!-- Additional SEO -->
+    <meta name="keywords" content="LLM Security, AI Security Engineer, OWASP LLM Top-10, Red Team Testing, DevSecOps, PII Detection, AI Governance">
+    <meta name="author" content="Siwen Wang">
+    <link rel="canonical" href="https://siwenwang0803.github.io/portfolio-site/">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,6 +41,42 @@
         .project-card:hover {
             transform: translateY(-4px);
         }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            /* Larger button text for better touch targets */
+            .project-card a {
+                font-size: 14px !important;
+                min-height: 44px;
+                padding: 12px 16px !important;
+            }
+            
+            /* Horizontal scrolling for projects on mobile */
+            .projects-grid {
+                display: flex;
+                overflow-x: auto;
+                gap: 1rem;
+                padding-bottom: 1rem;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+            }
+            
+            .projects-grid .project-card {
+                flex: 0 0 280px;
+                scroll-snap-align: start;
+            }
+            
+            /* Better spacing for mobile CTA buttons */
+            .cta-buttons {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .cta-buttons a {
+                font-size: 16px !important;
+                min-height: 48px;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -38,7 +93,7 @@
             </div>
             
             <!-- Title -->
-            <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-indigo-600">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-4" style="color: #0066FF;">
                 LLM Security Engineer
             </h2>
             
@@ -50,22 +105,23 @@
             <!-- Value Props -->
             <div class="flex flex-wrap justify-center gap-6 mb-8 text-sm text-gray-700">
                 <div class="flex items-center">
-                    <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                    <span class="w-2 h-2 rounded-full mr-2" style="background-color: #0066FF;"></span>
                     OWASP LLM Top-10 Specialist
                 </div>
                 <div class="flex items-center">
-                    <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                    <span class="w-2 h-2 rounded-full mr-2" style="background-color: #0066FF;"></span>
                     $4-7k Enterprise Pilots
                 </div>
                 <div class="flex items-center">
-                    <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    <span class="w-2 h-2 rounded-full mr-2" style="background-color: #0066FF;"></span>
                     40% Cost Reduction Proven
                 </div>
             </div>
             
             <!-- CTA Button -->
             <a href="https://calendly.com/siwenwang/20min" 
-               class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg"
+               class="inline-block text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
+               style="background-color: #0066FF; hover:background-color: #0052CC;"
                aria-label="Schedule a 20-minute consultation call about LLM security services">
                 📅 Book 20 min Chat
             </a>
@@ -75,12 +131,12 @@
     <!-- Projects Grid -->
     <section class="py-16 bg-white">
         <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-6 text-gray-900">Complete LLM Security Stack</h2>
+            <h2 class="text-3xl font-bold text-center mb-6 text-gray-900">Building Safer AI: My End‑to‑End LLM Security Toolkit</h2>
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                End-to-end security solutions covering the entire LLM development lifecycle: <strong>Red team testing</strong> → <strong>DevSecOps integration</strong> → <strong>Production governance</strong>
+                Three interconnected tools I built to secure the entire LLM development lifecycle: <strong>Red team testing</strong> → <strong>DevSecOps integration</strong> → <strong>Production governance</strong>
             </p>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 projects-grid">
                 
                 <!-- RedForge Project -->
                 <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
@@ -95,10 +151,10 @@
                         
                         <!-- Tech Stack Badges -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-medium">Python</span>
-                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm font-medium">OWASP LLM Top 10</span>
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-medium">Docker</span>
-                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm font-medium">NIST AI-RMF</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #0066FF;">Python</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #DC2626;">OWASP LLM Top 10</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #059669;">Docker</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #7C3AED;">NIST AI-RMF</span>
                         </div>
                         
                         <!-- Action Buttons -->
@@ -130,10 +186,10 @@
                         
                         <!-- Tech Stack Badges -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-medium">GPT-4o</span>
-                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm font-medium">OWASP LLM Top-10</span>
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-medium">OpenTelemetry</span>
-                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm font-medium">LangGraph</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #0066FF;">GPT-4o</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #DC2626;">OWASP LLM Top-10</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #059669;">OpenTelemetry</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #7C3AED;">LangGraph</span>
                         </div>
                         
                         <!-- Action Buttons -->
@@ -165,10 +221,10 @@
                         
                         <!-- Tech Stack Badges -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-medium">FastAPI</span>
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-medium">Redis</span>
-                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm font-medium">PII Detection</span>
-                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm font-medium">VS Code Extension</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #0066FF;">FastAPI</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #059669;">Redis</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #DC2626;">PII Detection</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded text-sm font-medium" style="color: #F59E0B;">VS Code Extension</span>
                         </div>
                         
                         <!-- Action Buttons -->
@@ -228,24 +284,24 @@
                 <h3 class="font-semibold text-gray-800 mb-4">Technical Stack</h3>
                 <div class="flex flex-wrap justify-center gap-2">
                     <!-- Security & Compliance -->
-                    <span class="bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm font-medium border border-red-200">OWASP LLM Top-10</span>
-                    <span class="bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm font-medium border border-red-200">NIST AI-RMF</span>
-                    <span class="bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm font-medium border border-red-200">PII Detection</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">OWASP LLM Top-10</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">NIST AI-RMF</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">PII Detection</span>
                     
                     <!-- AI & ML -->
-                    <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm font-medium border border-purple-200">GPT-4o</span>
-                    <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm font-medium border border-purple-200">LangGraph</span>
-                    <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm font-medium border border-purple-200">Multi-Agent Systems</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">GPT-4o</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">LangGraph</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">Multi-Agent Systems</span>
                     
                     <!-- Infrastructure -->
-                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium border border-blue-200">Docker</span>
-                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium border border-blue-200">Kubernetes</span>
-                    <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium border border-blue-200">FastAPI</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">Docker</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">Kubernetes</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">FastAPI</span>
                     
                     <!-- Monitoring & Analytics -->
-                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium border border-green-300">OpenTelemetry</span>
-                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium border border-green-300">Grafana</span>
-                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium border border-green-300">Cost Analytics</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">OpenTelemetry</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">Grafana</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">Cost Analytics</span>
                 </div>
             </div>
         </div>
@@ -313,7 +369,7 @@
                 From red team testing to production governance—let's build enterprise-ready AI security together.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center cta-buttons">
                 <a href="mailto:siwen@proxene.dev" 
                    class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors"
                    aria-label="Send email to discuss LLM security consulting">

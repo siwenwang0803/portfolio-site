@@ -1,0 +1,85 @@
+{
+  "projects": [
+    {
+      "id": "redforge",
+      "title": "RedForge - Automated LLM Red Team Platform",
+      "description": "<strong>Product Hunt ready</strong> OWASP LLM Top 10 testing platform. Enterprise pilots at $4-7k, fintech customers passing PCI DSS audits with automated compliance reports.",
+      "image": "assets/redforge-demo.webp",
+      "imageAlt": "RedForge OWASP LLM security scanning demo showing attack vector detection and compliance reporting",
+      "tags": [
+        {"text": "Python", "color": "#0066FF"},
+        {"text": "OWASP LLM Top 10", "color": "#DC2626"},
+        {"text": "Docker", "color": "#059669"},
+        {"text": "NIST AI-RMF", "color": "#7C3AED"}
+      ],
+      "buttons": [
+        {
+          "text": "GitHub →",
+          "url": "https://github.com/siwenwang0803/RedForge",
+          "type": "primary",
+          "aria": "View RedForge source code on GitHub"
+        },
+        {
+          "text": "Live Demo ⇢",
+          "url": "https://siwenwang0803.github.io/RedForge/",
+          "type": "secondary",
+          "aria": "View RedForge live demo"
+        }
+      ]
+    },
+    {
+      "id": "secure-pr-guard",
+      "title": "Secure-PR-Guard - Multi-Agent AI Code Review",
+      "description": "<strong>GitHub Marketplace published</strong> multi-agent AI system with GPT-4o. Complete OWASP LLM Top-10 compliance, real-time cost monitoring, ~$0.015 per PR analysis.",
+      "image": "assets/securepr-demo.webp",
+      "imageAlt": "Secure-PR-Guard GitHub Action analyzing pull request with multi-agent AI system and cost monitoring",
+      "tags": [
+        {"text": "GPT-4o", "color": "#0066FF"},
+        {"text": "OWASP LLM Top-10", "color": "#DC2626"},
+        {"text": "OpenTelemetry", "color": "#059669"},
+        {"text": "LangGraph", "color": "#7C3AED"}
+      ],
+      "buttons": [
+        {
+          "text": "GitHub →",
+          "url": "https://github.com/siwenwang0803/secure-pr-guard",
+          "type": "primary",
+          "aria": "View Secure-PR-Guard source code on GitHub"
+        },
+        {
+          "text": "Marketplace ⇢",
+          "url": "https://github.com/marketplace/actions/secure-pr-guard",
+          "type": "secondary",
+          "aria": "Install Secure-PR-Guard from GitHub Marketplace"
+        }
+      ]
+    },
+    {
+      "id": "proxene",
+      "title": "Proxene - AI Governance Proxy",
+      "description": "<strong>30-second setup</strong> developer-first proxy with 40% cost savings and 100% PII leak prevention. Complete SOC2/GDPR audit trail with VS Code debugging integration.",
+      "image": "assets/proxene-demo.webp",
+      "imageAlt": "Proxene AI governance proxy dashboard showing PII detection, cost savings, and VS Code integration",
+      "tags": [
+        {"text": "FastAPI", "color": "#0066FF"},
+        {"text": "Redis", "color": "#059669"},
+        {"text": "PII Detection", "color": "#DC2626"},
+        {"text": "VS Code Extension", "color": "#F59E0B"}
+      ],
+      "buttons": [
+        {
+          "text": "GitHub →",
+          "url": "https://github.com/siwenwang0803/Proxene",
+          "type": "primary",
+          "aria": "View Proxene source code on GitHub"
+        },
+        {
+          "text": "Docs ⇢",
+          "url": "https://github.com/siwenwang0803/Proxene#-quick-start",
+          "type": "secondary",
+          "aria": "View Proxene documentation and quick start guide"
+        }
+      ]
+    }
+  ]
+}
