@@ -27,7 +27,7 @@
 <body class="bg-gray-50 text-gray-900">
 
     <!-- Hero Section -->
-    <section class="bg-gray-50 py-20">
+    <section class="bg-gray-50 py-12">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <!-- Name & Title with inline avatar -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -65,15 +65,16 @@
             
             <!-- CTA Button -->
             <a href="https://calendly.com/siwenwang/20min" 
-               class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg">
+               class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg"
+               aria-label="Schedule a 20-minute consultation call about LLM security services">
                 📅 Book 20 min Chat
             </a>
         </div>
     </section>
 
     <!-- Projects Grid -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
+    <section class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-6 text-gray-900">Complete LLM Security Stack</h2>
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
                 End-to-end security solutions covering the entire LLM development lifecycle: <strong>Red team testing</strong> → <strong>DevSecOps integration</strong> → <strong>Production governance</strong>
@@ -83,8 +84,8 @@
                 
                 <!-- RedForge Project -->
                 <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="assets/redforge-demo.webp" alt="RedForge Demo" class="w-full h-full object-cover">
+                    <div class="aspect-video overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <img src="assets/redforge-demo.webp" alt="RedForge OWASP LLM security scanning demo showing attack vector detection and compliance reporting" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">RedForge - Automated LLM Red Team Platform</h3>
@@ -100,18 +101,26 @@
                             <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm font-medium">NIST AI-RMF</span>
                         </div>
                         
-                        <!-- GitHub Button -->
-                        <a href="https://github.com/siwenwang0803/RedForge" 
-                           class="inline-block bg-gray-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors">
-                            View on GitHub →
-                        </a>
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://github.com/siwenwang0803/RedForge" 
+                               class="inline-block bg-gray-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                               aria-label="View RedForge source code on GitHub">
+                                GitHub →
+                            </a>
+                            <a href="https://siwenwang0803.github.io/RedForge/" 
+                               class="inline-block border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+                               aria-label="View RedForge live demo">
+                                Live Demo ⇢
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Secure-PR-Guard Project -->
                 <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="assets/securepr-demo.webp" alt="Secure PR Guard Demo" class="w-full h-full object-cover">
+                    <div class="aspect-video overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <img src="assets/securepr-demo.webp" alt="Secure-PR-Guard GitHub Action analyzing pull request with multi-agent AI system and cost monitoring" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Secure-PR-Guard - Multi-Agent AI Code Review</h3>
@@ -127,18 +136,26 @@
                             <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm font-medium">LangGraph</span>
                         </div>
                         
-                        <!-- GitHub Button -->
-                        <a href="https://github.com/siwenwang0803/secure-pr-guard" 
-                           class="inline-block bg-gray-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors">
-                            View on GitHub →
-                        </a>
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://github.com/siwenwang0803/secure-pr-guard" 
+                               class="inline-block bg-gray-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                               aria-label="View Secure-PR-Guard source code on GitHub">
+                                GitHub →
+                            </a>
+                            <a href="https://github.com/marketplace/actions/secure-pr-guard" 
+                               class="inline-block border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+                               aria-label="Install Secure-PR-Guard from GitHub Marketplace">
+                                Marketplace ⇢
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Proxene Project -->
                 <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="assets/proxene-demo.webp" alt="Proxene Demo" class="w-full h-full object-cover">
+                    <div class="aspect-video overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <img src="assets/proxene-demo.webp" alt="Proxene AI governance proxy dashboard showing PII detection, cost savings, and VS Code integration" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Proxene - AI Governance Proxy</h3>
@@ -154,11 +171,19 @@
                             <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm font-medium">VS Code Extension</span>
                         </div>
                         
-                        <!-- GitHub Button -->
-                        <a href="https://github.com/siwenwang0803/Proxene" 
-                           class="inline-block bg-gray-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors">
-                            View on GitHub →
-                        </a>
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://github.com/siwenwang0803/Proxene" 
+                               class="inline-block bg-gray-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                               aria-label="View Proxene source code on GitHub">
+                                GitHub →
+                            </a>
+                            <a href="https://github.com/siwenwang0803/Proxene#-quick-start" 
+                               class="inline-block border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+                               aria-label="View Proxene documentation and quick start guide">
+                                Docs ⇢
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -168,7 +193,7 @@
 
     <!-- LLM Security Expertise -->
     <section class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4">
+        <div class="max-w-5xl mx-auto px-4">
             <h2 class="text-2xl font-bold text-center mb-8 text-gray-900">LLM Security Expertise</h2>
             
             <!-- Core Security Skills -->
@@ -178,7 +203,7 @@
                         <span class="text-2xl">🎯</span>
                     </div>
                     <h3 class="font-bold text-lg mb-2">Red Team Testing</h3>
-                    <p class="text-gray-600 text-sm">OWASP LLM Top-10 • 47 Attack Vectors • Automated Vulnerability Discovery</p>
+                    <p class="text-gray-600 text-sm">OWASP LLM Top-10 • 47 Attack Vectors • Automated Vulnerability Discovery.</p>
                 </div>
                 
                 <div class="text-center">
@@ -186,7 +211,7 @@
                         <span class="text-2xl">⚙️</span>
                     </div>
                     <h3 class="font-bold text-lg mb-2">DevSecOps Integration</h3>
-                    <p class="text-gray-600 text-sm">CI/CD Security • Multi-Agent AI Systems • Real-time Cost Monitoring</p>
+                    <p class="text-gray-600 text-sm">CI/CD Security • Multi-Agent AI Systems • Real-time Cost Monitoring.</p>
                 </div>
                 
                 <div class="text-center">
@@ -194,7 +219,7 @@
                         <span class="text-2xl">🛡️</span>
                     </div>
                     <h3 class="font-bold text-lg mb-2">Production Governance</h3>
-                    <p class="text-gray-600 text-sm">PII Detection • Policy-as-Code • SOC2/GDPR Compliance</p>
+                    <p class="text-gray-600 text-sm">PII Detection • Policy-as-Code • SOC2/GDPR Compliance.</p>
                 </div>
             </div>
             
@@ -218,16 +243,16 @@
                     <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium border border-blue-200">FastAPI</span>
                     
                     <!-- Monitoring & Analytics -->
-                    <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium border border-green-200">OpenTelemetry</span>
-                    <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium border border-green-200">Grafana</span>
-                    <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium border border-green-200">Cost Analytics</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium border border-green-300">OpenTelemetry</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium border border-green-300">Grafana</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium border border-green-300">Cost Analytics</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials / Evidence -->
-    <section class="py-20 bg-white">
+    <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Security Impact & Results</h2>
             
@@ -290,11 +315,13 @@
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="mailto:siwen@proxene.dev" 
-                   class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors">
+                   class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors"
+                   aria-label="Send email to discuss LLM security consulting">
                     📧 Email Me
                 </a>
                 <a href="https://calendly.com/siwenwang/30min" 
-                   class="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors">
+                   class="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors"
+                   aria-label="Schedule a 30-minute consultation call">
                     📅 Schedule Call
                 </a>
             </div>
