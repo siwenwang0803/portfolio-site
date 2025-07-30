@@ -313,16 +313,16 @@
             <div class="relative mb-20">
                 <div class="timeline-dot hidden md:block" style="top: 100px;"></div>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <!-- GIF Left -->
+                    <!-- Demo Left -->
                     <div class="order-2 md:order-1">
-                        <div class="bg-slate-800 rounded-xl p-2 border border-slate-700 glow-blue gif-hover-container">
+                        <div class="bg-slate-800 rounded-xl p-2 border border-slate-700 glow-blue gif-hover-container project-demo-trigger cursor-pointer" data-video-src="assets/redforge-demo.mp4">
                             <div class="gif-placeholder">
                                 <div class="text-center">
                                     <svg class="w-12 h-12 mb-3 mx-auto text-blue-400" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                     </svg>
                                     <div class="text-slate-300 font-medium mb-1">RedForge Demo</div>
-                                    <div class="text-slate-400 text-sm">Hover to see in action</div>
+                                    <div class="text-slate-400 text-sm">Click to watch full demo</div>
                                 </div>
                             </div>
                             <div class="gif-content">
@@ -403,19 +403,29 @@
                         </div>
                     </div>
                     
-                    <!-- Video Right -->
+                    <!-- Demo Right -->
                     <div class="order-2">
-                        <div class="bg-slate-800 rounded-xl p-2 border border-slate-700 glow-blue">
-                            <video 
-                                class="w-full rounded-lg" 
-                                autoplay 
-                                loop 
-                                muted 
-                                playsinline
-                                poster="assets/securepr-demo.webp">
-                                <source src="assets/securepr-demo.mp4" type="video/mp4">
-                                <img src="assets/securepr-demo.webp" alt="Secure PR Guard Demo" class="w-full rounded-lg">
-                            </video>
+                        <div class="bg-slate-800 rounded-xl p-2 border border-slate-700 glow-blue project-demo-trigger cursor-pointer" data-video-src="assets/securepr-demo.mp4">
+                            <div class="relative">
+                                <video 
+                                    class="w-full rounded-lg" 
+                                    autoplay 
+                                    loop 
+                                    muted 
+                                    playsinline
+                                    poster="assets/securepr-demo.webp">
+                                    <source src="assets/securepr-demo.mp4" type="video/mp4">
+                                    <img src="assets/securepr-demo.webp" alt="Secure PR Guard Demo" class="w-full rounded-lg">
+                                </video>
+                                <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
+                                    <div class="opacity-0 hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                                        <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <p class="text-sm">Click to expand</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -425,19 +435,29 @@
             <div class="relative">
                 <div class="timeline-dot hidden md:block" style="top: 100px;"></div>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <!-- Video Left -->
+                    <!-- Demo Left -->
                     <div class="order-2 md:order-1">
-                        <div class="bg-slate-800 rounded-xl p-2 border border-slate-700 glow-blue">
-                            <video 
-                                class="w-full rounded-lg" 
-                                autoplay 
-                                loop 
-                                muted 
-                                playsinline
-                                poster="assets/proxene-demo.webp">
-                                <source src="assets/proxene-demo.mp4" type="video/mp4">
-                                <img src="assets/proxene-demo.webp" alt="Proxene Demo" class="w-full rounded-lg">
-                            </video>
+                        <div class="bg-slate-800 rounded-xl p-2 border border-slate-700 glow-blue project-demo-trigger cursor-pointer" data-video-src="assets/proxene-demo.mp4">
+                            <div class="relative">
+                                <video 
+                                    class="w-full rounded-lg" 
+                                    autoplay 
+                                    loop 
+                                    muted 
+                                    playsinline
+                                    poster="assets/proxene-demo.webp">
+                                    <source src="assets/proxene-demo.mp4" type="video/mp4">
+                                    <img src="assets/proxene-demo.webp" alt="Proxene Demo" class="w-full rounded-lg">
+                                </video>
+                                <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
+                                    <div class="opacity-0 hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                                        <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <p class="text-sm">Click to expand</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -717,6 +737,70 @@
             </p>
         </div>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full bg-slate-900 rounded-lg overflow-hidden">
+            <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <video id="modalVideo" class="w-full h-auto" controls autoplay>
+                <source id="modalVideoSource" src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // Lightbox Modal functionality
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+        const modalVideoSource = document.getElementById('modalVideoSource');
+        const closeModal = document.getElementById('closeModal');
+        const demoTriggers = document.querySelectorAll('.project-demo-trigger');
+
+        // Open modal when demo is clicked
+        demoTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                const videoSrc = trigger.getAttribute('data-video-src');
+                if (videoSrc) {
+                    modalVideoSource.src = videoSrc;
+                    modalVideo.load();
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }
+            });
+        });
+
+        // Close modal when close button is clicked
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modalVideo.pause();
+            modalVideo.currentTime = 0;
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        });
+
+        // Close modal when clicking outside the video
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                modalVideo.pause();
+                modalVideo.currentTime = 0;
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                modal.classList.add('hidden');
+                modalVideo.pause();
+                modalVideo.currentTime = 0;
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 
 </body>
 </html>
