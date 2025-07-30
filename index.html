@@ -151,6 +151,48 @@
             to { height: var(--bar-height); }
         }
         
+        /* GIF hover effect */
+        .gif-hover-container {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .gif-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 169, 255, 0.1);
+            border: 2px dashed rgba(0, 169, 255, 0.3);
+            border-radius: 8px;
+            min-height: 200px;
+            transition: all 0.3s ease;
+        }
+        
+        .gif-placeholder:hover {
+            background: rgba(0, 169, 255, 0.2);
+            border-color: rgba(0, 169, 255, 0.5);
+        }
+        
+        .gif-content {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .gif-hover-container:hover .gif-content {
+            opacity: 1;
+        }
+        
+        .gif-hover-container:hover .gif-placeholder {
+            opacity: 0;
+        }
+
         /* Multi-agent diagram */
         .agent-node {
             width: 40px;
@@ -271,19 +313,18 @@
             <div class="relative mb-20">
                 <div class="timeline-dot hidden md:block" style="top: 100px;"></div>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <!-- Video Left -->
+                    <!-- GIF Left -->
                     <div class="order-2 md:order-1">
-                        <div class="bg-slate-800 rounded-xl p-2 border border-slate-700 glow-blue">
-                            <video 
-                                class="w-full rounded-lg" 
-                                autoplay 
-                                loop 
-                                muted 
-                                playsinline
-                                poster="assets/redforge-demo.webp">
-                                <source src="assets/redforge-demo.mp4" type="video/mp4">
-                                <img src="assets/redforge-demo.webp" alt="RedForge Demo" class="w-full rounded-lg">
-                            </video>
+                        <div class="bg-slate-800 rounded-xl p-2 border border-slate-700 glow-blue gif-hover-container">
+                            <div class="gif-placeholder">
+                                <div class="text-center">
+                                    <div class="text-4xl mb-2">🎯</div>
+                                    <div class="text-slate-400 text-sm">Hover to see RedForge in action</div>
+                                </div>
+                            </div>
+                            <div class="gif-content">
+                                <img src="assets/redforge-demo.gif" alt="RedForge Demo" class="w-full rounded-lg">
+                            </div>
                         </div>
                     </div>
                     
