@@ -47,17 +47,13 @@
             background-size: 40px 40px;
         }
         
-        /* Typewriter animation */
+        /* Typewriter animation - simplified approach */
         .typewriter {
-            overflow: hidden;
             border-right: 2px solid #00A9FF;
             white-space: nowrap;
-            animation: typing 4.5s steps(95, end), blink-caret 0.75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
+            overflow: hidden;
+            width: fit-content;
+            animation: blink-caret 0.75s step-end infinite;
         }
         
         @keyframes blink-caret {
