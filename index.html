@@ -219,6 +219,52 @@
             text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
         }
         
+        /* Enhanced micro-interactions */
+        .stage-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .stage-badge:hover {
+            transform: scale(1.05);
+            background: rgba(34, 211, 238, 0.2);
+        }
+        
+        .proven-impact-item {
+            transition: all 0.3s ease;
+        }
+        
+        .proven-impact-item:hover {
+            transform: translateY(-2px);
+            background: rgba(30, 41, 59, 0.3);
+        }
+        
+        /* Improved button hover effects */
+        .btn-enhanced {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-enhanced:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-enhanced:hover::before {
+            left: 100%;
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             .timeline-line {
@@ -270,43 +316,54 @@
             <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 mb-12">
                 <a href="https://calendly.com/siwenwang/20min" 
-                   class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-white transition-all glow-blue-hover"
+                   class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-white transition-all glow-blue-hover btn-enhanced"
                    style="background-color: #00A9FF;"
                    aria-label="Schedule a 20-minute consultation call">
                     <span class="mr-2">📅</span> Book Strategy Call
                 </a>
                 <a href="mailto:siwen@proxene.dev" 
-                   class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-slate-300 border border-slate-600 hover:border-slate-500 hover:bg-slate-800 transition-all">
+                   class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-slate-300 border border-slate-600 hover:border-slate-500 hover:bg-slate-800 btn-enhanced">
                     <span class="mr-2">✉️</span> Contact Me
                 </a>
             </div>
             
-            <!-- Stats -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
-                    <div class="text-2xl font-bold text-white mb-1">$4-7k</div>
-                    <div class="text-slate-400 text-sm">Enterprise Pilots</div>
-                </div>
-                <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
-                    <div class="text-2xl font-bold text-white mb-1">40%</div>
-                    <div class="text-slate-400 text-sm">Cost Reduction</div>
-                </div>
-                <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
-                    <div class="text-2xl font-bold text-white mb-1">100%</div>
-                    <div class="text-slate-400 text-sm">PII Protection</div>
+            <!-- NEW: Proven Impact Section -->
+            <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="proven-impact-item p-4 rounded-lg">
+                        <div class="flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <h3 class="text-lg font-semibold text-white">Enterprise Validation</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm mt-1">Successful pilots with FinTech clients at a $4-7k price point.</p>
+                    </div>
+                    <div class="proven-impact-item p-4 rounded-lg">
+                        <div class="flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            <h3 class="text-lg font-semibold text-white">Cost & Efficiency</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm mt-1">Achieved an average of 40% cost reduction on LLM API spend.</p>
+                    </div>
+                    <div class="proven-impact-item p-4 rounded-lg">
+                        <div class="flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.417l4.5-4.5M12 2.944a11.955 11.955 0 00-8.618 3.04m17.236-3.04a11.955 11.955 0 01-8.618-3.04m12.02 17.473L17.5 16M3 20.417l4.5-4.5"></path></svg>
+                            <h3 class="text-lg font-semibold text-white">Security & Compliance</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm mt-1">100% PII leak prevention, enabling clients to pass PCI DSS audits.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Timeline Section -->
-    <section class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-20">
             <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4">
-                Security Arsenal
+                The Complete LLM Security Lifecycle
             </h2>
             <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-                Three interconnected tools I built to secure the entire LLM development lifecycle
+                An integrated platform of three tools I built to secure AI from pre-production to runtime.
             </p>
         </div>
         
@@ -315,7 +372,7 @@
             <div class="timeline-line hidden md:block"></div>
             
             <!-- Project 1: RedForge -->
-            <div class="relative mb-20">
+            <div class="relative mb-24">
                 <div class="timeline-dot hidden md:block" style="top: 100px;"></div>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <!-- Demo Left -->
@@ -351,13 +408,15 @@
                     <div class="order-1 md:order-2">
                         <div class="bg-slate-800/30 border border-slate-700 rounded-xl p-8">
                             <div class="flex items-center gap-3 mb-4">
+                                <div class="w-auto px-3 py-1 text-xs font-mono text-cyan-300 bg-cyan-900/30 border border-cyan-800 rounded-full stage-badge">Stage 01: Pre-Production Testing</div>
+                            </div>
+                            <div class="flex items-center gap-3 mb-4">
                                 <div class="w-3 h-3 rounded-full" style="background-color: #00A9FF;"></div>
                                 <span class="text-sm font-mono text-slate-400">01</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white mb-4">RedForge</h3>
                             <p class="text-slate-300 mb-6 leading-relaxed">
-                                <strong class="text-white">Product Hunt ready</strong> OWASP LLM Top 10 testing platform. 
-                                Enterprise pilots at $4-7k, fintech customers passing PCI DSS audits with automated compliance reports.
+                                The lifecycle begins here. Before development, RedForge acts as an automated red team, stress-testing base models against the OWASP LLM Top 10 to ensure we build on a secure foundation.
                             </p>
                             
                             <div class="flex flex-wrap gap-2 mb-6">
@@ -369,11 +428,11 @@
                             
                             <div class="flex gap-3">
                                 <a href="https://github.com/siwenwang0803/RedForge" 
-                                   class="inline-flex items-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors">
+                                   class="inline-flex items-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg btn-enhanced">
                                     GitHub →
                                 </a>
                                 <a href="https://siwenwang0803.github.io/RedForge/" 
-                                   class="inline-flex items-center px-4 py-2 border border-slate-600 hover:border-slate-500 text-slate-300 rounded-lg transition-colors">
+                                   class="inline-flex items-center px-4 py-2 border border-slate-600 hover:border-slate-500 text-slate-300 rounded-lg btn-enhanced">
                                     Product Page
                                 </a>
                             </div>
@@ -383,20 +442,22 @@
             </div>
             
             <!-- Project 2: Secure-PR-Guard -->
-            <div class="relative mb-20">
+            <div class="relative mb-24">
                 <div class="timeline-dot hidden md:block" style="top: 100px;"></div>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <!-- Content Left -->
                     <div class="order-1">
                         <div class="bg-slate-800/30 border border-slate-700 rounded-xl p-8">
                             <div class="flex items-center gap-3 mb-4">
+                                <div class="w-auto px-3 py-1 text-xs font-mono text-cyan-300 bg-cyan-900/30 border border-cyan-800 rounded-full stage-badge">Stage 02: CI/CD Integration</div>
+                            </div>
+                            <div class="flex items-center gap-3 mb-4">
                                 <div class="w-3 h-3 rounded-full" style="background-color: #00A9FF;"></div>
                                 <span class="text-sm font-mono text-slate-400">02</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white mb-4">Secure-PR-Guard</h3>
                             <p class="text-slate-300 mb-6 leading-relaxed">
-                                <strong class="text-white">GitHub Marketplace published</strong> multi-agent AI system with GPT-4o. 
-                                Complete OWASP LLM Top-10 compliance, real-time cost monitoring, ~$0.015 per PR analysis.
+                                Once the model is validated, security shifts to the code. This multi-agent GitHub Action integrates into the CI/CD pipeline, reviewing every pull request to prevent insecure code from ever reaching production.
                             </p>
                             
                             <div class="flex flex-wrap gap-2 mb-6">
@@ -408,11 +469,11 @@
                             
                             <div class="flex gap-3">
                                 <a href="https://github.com/siwenwang0803/secure-pr-guard" 
-                                   class="inline-flex items-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors">
+                                   class="inline-flex items-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg btn-enhanced">
                                     GitHub →
                                 </a>
                                 <a href="https://github.com/marketplace/actions/secure-pr-guard" 
-                                   class="inline-flex items-center px-4 py-2 border border-slate-600 hover:border-slate-500 text-slate-300 rounded-lg transition-colors">
+                                   class="inline-flex items-center px-4 py-2 border border-slate-600 hover:border-slate-500 text-slate-300 rounded-lg btn-enhanced">
                                     Marketplace
                                 </a>
                             </div>
@@ -489,13 +550,15 @@
                     <div class="order-1 md:order-2">
                         <div class="bg-slate-800/30 border border-slate-700 rounded-xl p-8">
                             <div class="flex items-center gap-3 mb-4">
+                                <div class="w-auto px-3 py-1 text-xs font-mono text-cyan-300 bg-cyan-900/30 border border-cyan-800 rounded-full stage-badge">Stage 03: Production Governance</div>
+                            </div>
+                            <div class="flex items-center gap-3 mb-4">
                                 <div class="w-3 h-3 rounded-full" style="background-color: #00A9FF;"></div>
                                 <span class="text-sm font-mono text-slate-400">03</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white mb-4">Proxene</h3>
                             <p class="text-slate-300 mb-6 leading-relaxed">
-                                <strong class="text-white">30-second setup</strong> developer-first proxy with 40% cost savings 
-                                and 100% PII leak prevention. Complete SOC2/GDPR audit trail with VS Code debugging integration.
+                                With secure code deployed, Proxene provides the final layer of runtime defense and optimization, acting as an intelligent gateway that enforces policies, prevents data leaks, and cuts costs in production.
                             </p>
                             
                             <div class="flex flex-wrap gap-2 mb-6">
@@ -507,11 +570,11 @@
                             
                             <div class="flex gap-3">
                                 <a href="https://github.com/siwenwang0803/Proxene" 
-                                   class="inline-flex items-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors">
+                                   class="inline-flex items-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg btn-enhanced">
                                     GitHub →
                                 </a>
                                 <a href="https://github.com/siwenwang0803/Proxene#-quick-start" 
-                                   class="inline-flex items-center px-4 py-2 border border-slate-600 hover:border-slate-500 text-slate-300 rounded-lg transition-colors">
+                                   class="inline-flex items-center px-4 py-2 border border-slate-600 hover:border-slate-500 text-slate-300 rounded-lg btn-enhanced">
                                     Docs
                                 </a>
                             </div>
